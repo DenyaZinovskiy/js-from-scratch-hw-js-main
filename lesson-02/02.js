@@ -7,7 +7,7 @@
 * Для успешного прохождения тестов не меняйте названия переменных!
 */
 
-let dice1 // your code
+let dice1 = Math.floor(Math.random() * 6) // your code
 let dice2 // your code
 let isWinningDouble // your code
 
