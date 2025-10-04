@@ -14,10 +14,11 @@
 
 Подсказка: можно использовать функцию `includesElement`, которую мы написали ранее. Переписывать её не нужно, она доступна по всему проекту за счёт hoisting.
 */
-const elements = [1, 2, 3, 4, 5, 5, 7, 8, 8, 9, 9, 9, 9];
+
+const array = [1, 1, 1, 2, 3, 4, 5, 5, 7, 8, 8, 9, 9, 9, 9, 89];
 const uniqueElements = [];
 
-function includesElements(array, element) {
+function includesElement(array, element) {
     for (let i = 0; i < array.length; i++) {
         if (array[i] === element) {
             return true;
@@ -26,15 +27,13 @@ function includesElements(array, element) {
     return false;
 }
 
-// console.log(includesElements(elements, 9));
-
 function findUniqueElements(array) {
     for (let i = 0; i < array.length; i++) {
-        if (!includesElements(uniqueElements, array[i])) {
+        if (!includesElement(uniqueElements, array[i])) {
             uniqueElements.push(array[i]);
         }
     }
     return uniqueElements;
 }
 
-console.log(findUniqueElements(elements));
+console.log(findUniqueElements(array));
