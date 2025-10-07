@@ -15,8 +15,8 @@
 Подсказка: можно использовать функцию `includesElement`, которую мы написали ранее. Переписывать её не нужно, она доступна по всему проекту за счёт hoisting.
 */
 
-const array = [1, 1, 1, 2, 3, 4, 5, 5, 7, 8, 8, 9, 9, 9, 9, 89];
-const uniqueElements = [];
+const array = [1, 1, 1, 2, 3, 7, 8, 8, 9, 9, 9, 9, 89];
+
 
 function includesElement(array, element) {
     for (let i = 0; i < array.length; i++) {
@@ -28,6 +28,7 @@ function includesElement(array, element) {
 }
 
 function findUniqueElements(array) {
+    const uniqueElements = [];
     for (let i = 0; i < array.length; i++) {
         if (!includesElement(uniqueElements, array[i])) {
             uniqueElements.push(array[i]);
