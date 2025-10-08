@@ -18,14 +18,14 @@
 const array = [1, 1, 1, 2, 3, 7, 8, 8, 9, 9, 9, 9, 89];
 
 
-function includesElement(array, element) {
-    for (let i = 0; i < array.length; i++) {
-        if (array[i] === element) {
-            return true;
-        }
-    }
-    return false;
-}
+// function includesElement(array, element) {
+//     for (let i = 0; i < array.length; i++) {
+//         if (array[i] === element) {
+//             return true;
+//         }
+//     }
+//     return false;
+// }
 
 function findUniqueElements(array) {
     const uniqueElements = [];
