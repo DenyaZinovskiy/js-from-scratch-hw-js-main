@@ -23,22 +23,27 @@ const oddNumbers = filter(numbers, (element, index) => {
 console.log(oddNumbers) // Должен вывести: [1, 3, 5]
 */
 
-const numbers = [1, 2, 3, 4, 5]
-const oddNumbers = []
+const numbers = [1, 2, 3, 4, 5];
 
 const filter = (array, callback) => {
+    const result = []; // создаём новый массив внутри
+
     for (let i = 0; i < array.length; i++) {
-      const number = array[i];
-      callback(number, i);
+        const element = array[i];
+        // если коллбэк возвращает true — добавляем элемент
+        if (callback(element, i)) {
+            result.push(element);
+        }
     }
+
+    return result; // возвращаем новый массив
+};
+
+// функция, которая решает, подходит ли элемент
+function bla(element, index) {
+    return element % 2 !== 0; // просто возвращает true или false
 }
 
-function bla (element, index) {
-    if (element % 2 !==0) {
-        oddNumbers.push(element);
-    }
-}
+const oddNumbers = filter(numbers, bla);
 
-filter(numbers, bla)
-
-console.log(oddNumbers);
+console.log(oddNumbers); // [1, 3, 5]
