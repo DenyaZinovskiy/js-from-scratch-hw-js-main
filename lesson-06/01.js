@@ -40,10 +40,10 @@ const filter = (array, callback) => {
 };
 
 // функция, которая решает, подходит ли элемент
-function bla(element, index) {
+function check(element, index) {
     return element % 2 !== 0; // просто возвращает true или false
 }
 
-const oddNumbers = filter(numbers, bla);
+const oddNumbers = filter(numbers, check);
 
 console.log(oddNumbers); // [1, 3, 5]
